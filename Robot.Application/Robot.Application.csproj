@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5391066B-FD4A-483C-980B-6A5010E6FDBC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Robot.Application</RootNamespace>
+    <AssemblyName>Robot.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Robot.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Robot.Behavior\Robot.Behavior.csproj">
+      <Project>{3ffa55ea-f34e-4005-83c8-1ecbfc5cde2e}</Project>
+      <Name>Robot.Behavior</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.Config\Robot.Config\Robot.Config.csproj">
+      <Project>{d4171328-a7fa-4763-9918-0e1e76e270a7}</Project>
+      <Name>Robot.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.Environment\Robot.Environment.csproj">
+      <Project>{86597959-84cd-4302-875e-e0a00b8d19a1}</Project>
+      <Name>Robot.Environment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.IO\Robot.IO.csproj">
+      <Project>{746d5cb0-c148-41df-8bd0-25c5f37f6c70}</Project>
+      <Name>Robot.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.LocomotionLab\Robot.Locomotion.csproj">
+      <Project>{c4cc5571-41e5-4c1c-afa4-5f68fce8eba8}</Project>
+      <Name>Robot.Locomotion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.Network\Robot.Network.csproj">
+      <Project>{4fc3eae0-bf46-4c5a-8fd1-033c236d47e5}</Project>
+      <Name>Robot.Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.Utils\Robot.Utils.csproj">
+      <Project>{0fbc9740-4c42-41f8-8f9b-03733a0abb11}</Project>
+      <Name>Robot.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.Vision\Robot.Vision.csproj">
+      <Project>{7202ea3f-ca66-494f-bada-b881ba42a82a}</Project>
+      <Name>Robot.Vision</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
