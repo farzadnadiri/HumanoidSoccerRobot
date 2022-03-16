@@ -15,10 +15,9 @@ https://user-images.githubusercontent.com/6237268/158478738-22409dc2-c38a-443d-8
 
 ## Vision and Head control Module
 Using this module, the robot is able to get information about its surroundings, its location on the pitch, and to detect where the ball and goal are. To implement high accuracy ball and goal detection, objects in the field are sampled and gathered in a color table, and then algorithms such as hough line detection and circle detection are used.
-
 EmguCV (a cross-platform .Net wrapper to OpenCV image processing library) is used in this module to capture and process images at a rate of approximately 29 frames per second.
-
 HSV colour space is used rather than RGB colour space, “because the R, G, and B components of an object’s color in a digital image are all correlated with the amount of light hitting the object, and therefore with each other, image descriptions in terms of those components make object discrimination difficult. 
+Furthermore, in this module various algorithms such as PID controllers have been used to control the robot's head to search for the ball and track it.
 </br>
 </br>
 ![vision](https://user-images.githubusercontent.com/6237268/158469069-534102eb-db8d-47e9-aa4a-df9265f78ef0.jpg)
