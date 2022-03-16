@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3FFA55EA-F34E-4005-83C8-1ECBFC5CDE2E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Robot.Behavior</RootNamespace>
+    <AssemblyName>Robot.Behavior</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BehaviorConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BehaviorConfig.Designer.cs">
+      <DependentUpon>BehaviorConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BehaviorControl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GNRobot.Device\GNRobot.Device.csproj">
+      <Project>{1EA00677-DF82-409F-9AD3-4B234E67B204}</Project>
+      <Name>GNRobot.Device</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.Config\Robot.Config\Robot.Config.csproj">
+      <Project>{d4171328-a7fa-4763-9918-0e1e76e270a7}</Project>
+      <Name>Robot.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.Environment\Robot.Environment.csproj">
+      <Project>{86597959-84CD-4302-875E-E0A00B8D19A1}</Project>
+      <Name>Robot.Environment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.IO\Robot.IO.csproj">
+      <Project>{746D5CB0-C148-41DF-8BD0-25C5F37F6C70}</Project>
+      <Name>Robot.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.LocomotionLab\Robot.Locomotion.csproj">
+      <Project>{c4cc5571-41e5-4c1c-afa4-5f68fce8eba8}</Project>
+      <Name>Robot.Locomotion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.Network\Robot.Network.csproj">
+      <Project>{4fc3eae0-bf46-4c5a-8fd1-033c236d47e5}</Project>
+      <Name>Robot.Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.Utils\Robot.Utils.csproj">
+      <Project>{0fbc9740-4c42-41f8-8f9b-03733a0abb11}</Project>
+      <Name>Robot.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.Vision\Robot.Vision.csproj">
+      <Project>{7202ea3f-ca66-494f-bada-b881ba42a82a}</Project>
+      <Name>Robot.Vision</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BehaviorConfig.resx">
+      <DependentUpon>BehaviorConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11111111111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111111111111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111111111112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111111111113.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down Arrow Icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\782.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7202EA3F-CA66-494F-BADA-B881BA42A82A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Robot.Vision</RootNamespace>
+    <AssemblyName>Robot.Vision</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV.UI, Version=2.9.0.1922, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Emgu\emgucv-windesktop 3.1.0.2282\bin\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI.GL">
+      <HintPath>C:\Emgu\emgucv-windesktop 3.1.0.2282\bin\Emgu.CV.UI.GL.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.World">
+      <HintPath>C:\Emgu\emgucv-windesktop 3.1.0.2282\bin\Emgu.CV.World.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph">
+      <HintPath>..\..\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Detectors\FieldDetector.cs" />
+    <Compile Include="HeadControl\Search.cs" />
+    <Compile Include="HeadControl\Tracker.cs" />
+    <Compile Include="ImageProcessing\Capture.cs" />
+    <Compile Include="ImageProcessing\ImageProcess.cs" />
+    <Compile Include="Tools\HistogramHelper.cs" />
+    <Compile Include="Vision.cs" />
+    <Compile Include="VisionLab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisionLab.designer.cs">
+      <DependentUpon>VisionLab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="VisionLab.resx">
+      <DependentUpon>VisionLab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gtk_media_play_ltr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bubble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dialog_information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up Arrow Icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down Arrow Icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\standstill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32-open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32-save_as.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32-exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-stop1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-play1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-stop2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32-copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32-past.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32-open1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32-save_as1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\standstill2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mirror.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Connect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disconnect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about1.png" />
+    <None Include="Resources\1.png" />
+    <Content Include="Resources\Logo1.ico" />
+    <None Include="Resources\ParandLog2.jpg" />
+    <None Include="Resources\ParandLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GNRobot.Device\GNRobot.Device.csproj">
+      <Project>{1EA00677-DF82-409F-9AD3-4B234E67B204}</Project>
+      <Name>GNRobot.Device</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.Config\Robot.Config\Robot.Config.csproj">
+      <Project>{d4171328-a7fa-4763-9918-0e1e76e270a7}</Project>
+      <Name>Robot.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.Environment\Robot.Environment.csproj">
+      <Project>{86597959-84cd-4302-875e-e0a00b8d19a1}</Project>
+      <Name>Robot.Environment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.IO\Robot.IO.csproj">
+      <Project>{746D5CB0-C148-41DF-8BD0-25C5F37F6C70}</Project>
+      <Name>Robot.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.Network\Robot.Network.csproj">
+      <Project>{4fc3eae0-bf46-4c5a-8fd1-033c236d47e5}</Project>
+      <Name>Robot.Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Robot.Utils\Robot.Utils.csproj">
+      <Project>{0fbc9740-4c42-41f8-8f9b-03733a0abb11}</Project>
+      <Name>Robot.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
