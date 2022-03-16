@@ -27,16 +27,15 @@ Furthermore, in this module various algorithms such as PID controllers have been
 “Static motions enable humanoid robots to solve static problems where a dynamic solution would not provide noteworthy benefits.” Says,“The most popular technique to create static motions for humanoid robots is keyframing. Since a key  frame motion defines many joint angles, tools for the design of key frame motions should support the motion designer to deal with them.” Since former team members were using RoboPlus motion editor to design keyframes,
 implementation of a motion editor inspired from Robotis motion editor and aimed to have all functionalities (managing Pages and Steps, On/Off, Mirror, Etc.) that RoboPlus has decided.
 The motion editor is used to create predefined motion patterns like Stand Style, Kick, Stand Up, and Block. Further more Bezier curves is used to produce smoother and cosequently more human-like motions in action.
-### Walk Engine
-“Omnidirectional locomotion is a concept that has proven to be advantageous in dynamic environments and in restricted spaces. The ability to move in any direction, irrespective of the orientation of the vehicle, and to control the rotational speed at the same time has advantages in many domains.”
-
-We developed a 4 phase COM shifting omnidirectional walking pattern generation approach. As walking speed is an absolutely crucial feature during the match, the Darwin-OP walk engine has been implemented and used along with the old walk engine in C# code. Fortunately, the walk engine successfully integrated on robot platform.
-### Stabilization
-“Balance control is an important topic for humanoid robotics and is becoming increasingly necessary for humanoid robots that must function within a human-centric environment. Regardless of the quality of bipedal locomotion, a humanoid robot must still be prepared for unexpected perturbations that could throw it off balance. These events are unpredictable and  potentially unavoidable; therefore, it is necessary to have robust controllers for balance maintenance and recovery.”
-
-To improve stability while walking, an initial version of Arm, Hip, and Ankle strategies are implemented and integrated into the walk engine in order to counter unpredictable disturbances and collisions.
 
 ![Capture2](https://user-images.githubusercontent.com/6237268/158459633-888b843f-d9c3-416b-bc16-7e2afb0abc4e.PNG)
+
+### Walk Engine & Stabilization
+“Omnidirectional locomotion is a concept that has proven to be advantageous in dynamic environments and in restricted spaces. The ability to move in any direction, irrespective of the orientation of the vehicle, and to control the rotational speed at the same time has advantages in many domains.”
+We developed a 4 phase COM shifting omnidirectional walking pattern generation approach. As walking speed is an absolutely crucial feature during the match, the Darwin-OP walk engine has been implemented and used along with the old walk engine in C# code. Fortunately, the walk engine successfully integrated on robot platform. </br>
+“Balance control is an important topic for humanoid robotics and is becoming increasingly necessary for humanoid robots that must function within a human-centric environment. Regardless of the quality of bipedal locomotion, a humanoid robot must still be prepared for unexpected perturbations that could throw it off balance. These events are unpredictable and  potentially unavoidable; therefore, it is necessary to have robust controllers for balance maintenance and recovery.”
+To improve stability while walking, an initial version of Arm, Hip, and Ankle strategies are implemented and integrated into the walk engine in order to counter unpredictable disturbances and collisions.
+
 ![Capture3](https://user-images.githubusercontent.com/6237268/158459649-a77866aa-7b10-4d13-86fa-01e5f27a6e58.PNG)
 ## Configuration and Monitoring Module
 All robot configuration files are created and saved in XML format. This module allows the operator to view and edit these files so that human error is reduced during configuration. Also, the balance and movement of the robot in the relevant forms can be seen on the chart, which helps the debugging operation.
