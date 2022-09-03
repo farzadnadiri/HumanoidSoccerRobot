@@ -50,3 +50,9 @@ Teammate communication is implemented in order to avoid collision while both rob
 Since this robot must be able to follow the match autonomously a state machine for processing the status and determining the behavior of the robot has been implemented in this module. This helps the robot to select and execute a suitable phase at any time based on the existing conditions. An interface for match settings has been implemented on top of this state machine, so quick adjustments during the match can be made if necessary.
 </br></br>
 ![Capture6](https://user-images.githubusercontent.com/6237268/158462129-3b655375-fea6-44f9-b415-b3dbcad165f8.PNG)
+</br></br>
+## Developers
+| Name | Email | Website |
+| ------------- | ------------- | ------------- | ------------- |
+| [Ahmad Amirivojdan](https://github.com/amirivojdan) | [amirivojdan@gmail.com](mailto:amirivojdan@gmail.com) | [amirivojdan.com](amirivojdan.com) |
+| [Farzad Nadiri](https://github.com/farzadnadiri) | [farzadnadiri7@gmail.com](mailto:farzadnadiri7@gmail.com) | [farzadnadiri.com](farzadnadiri.com) |
