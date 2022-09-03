@@ -54,5 +54,5 @@ Since this robot must be able to follow the match autonomously a state machine f
 ## Developers
 | Name                                                | Email                                                     | Website                              |
 | -------------                                       | -------------                                             | -------------                        |
-| [Ahmad Amirivojdan](https://github.com/amirivojdan) | [amirivojdan@gmail.com](mailto:amirivojdan@gmail.com)     | [amirivojdan.com](amirivojdan.com)   |
-| [Farzad Nadiri](https://github.com/farzadnadiri)    | [farzadnadiri7@gmail.com](mailto:farzadnadiri7@gmail.com) | [farzadnadiri.com](farzadnadiri.com) |
+| [Ahmad Amirivojdan](https://github.com/amirivojdan) | [amirivojdan@gmail.com](mailto:amirivojdan@gmail.com)     | [amirivojdan.com](http://www.amirivojdan.com)   |
+| [Farzad Nadiri](https://github.com/farzadnadiri)    | [farzadnadiri7@gmail.com](mailto:farzadnadiri7@gmail.com) | [farzadnadiri.com](http://www.farzadnadiri.com) |
